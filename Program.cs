@@ -117,20 +117,7 @@ public class Program
 
     private static void Years()
     {
-        var elevator = new Elevator(-3, 26);
-        var isWork = true;
-        while (isWork)
-        {
-            var command = Console.ReadLine();
-            if (int.TryParse(command, out var floor))
-            {
-                var result = elevator.move(floor);
-                Console.WriteLine(result ? "Успешно\n" : "Этаж не доступен\n");
-            }
-            else if (command == "e")
-            {
-                isWork = false;
-            }
-        }
+        var main = new Main();
+        main.main();
     }
 }
